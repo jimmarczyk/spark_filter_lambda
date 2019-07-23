@@ -1,0 +1,6 @@
+rddEligibleClaimsDenom = claims.filter(lambda x:
+                                       x["member_id"] in validMems
+                                       and x["member_id"] not in hsp
+                                       and x['supp'] != 'Y'
+                                       and x['pos'] != '81'
+                                       and x["dob"] <= x["date_start"])
